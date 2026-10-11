@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import AboutVideoThumbnail from "./subcomponents/AboutVideoThumbnail";
 import AboutVideoModal from "./subcomponents/AboutVideoModal";
 

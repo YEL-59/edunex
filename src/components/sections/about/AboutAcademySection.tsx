@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { aboutFeaturesData } from "@/data/about";
 import AboutAcademyGallery from "./subcomponents/AboutAcademyGallery";
 import AboutAcademyFeatureCard from "./subcomponents/AboutAcademyFeatureCard";

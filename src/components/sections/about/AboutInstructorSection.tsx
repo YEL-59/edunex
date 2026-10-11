@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import FlipButton from "@/components/common/FlipButton";
 import { aboutCoachesData } from "@/data/about";
 import AboutInstructorCard from "./subcomponents/AboutInstructorCard";

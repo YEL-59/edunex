@@ -1,5 +1,3 @@
-import React from "react";
-
 interface AboutTestimonialNavProps {
   onPrev: () => void;
   onNext: () => void;

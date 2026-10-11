@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { aboutCountersData } from "@/data/about";
 import AboutCounterCard from "./subcomponents/AboutCounterCard";
 import AboutReviewCard from "./subcomponents/AboutReviewCard";

@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import FlipButton from "@/components/common/FlipButton";
 import AboutBreadcrumb from "./subcomponents/AboutBreadcrumb";
 import AboutBannerElements from "./subcomponents/AboutBannerElements";
