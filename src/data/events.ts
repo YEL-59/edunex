@@ -1,4 +1,4 @@
-import { EventItem } from "@/types";
+import { EventItem, EventGridItem } from "@/types";
 
 export const eventsData: EventItem[] = [
   {
@@ -43,4 +43,127 @@ export const eventsData: EventItem[] = [
     },
     href: "/event-details",
   },
+];
+
+export const eventGridData: EventGridItem[] = [
+  {
+    id: 1,
+    title: "Design better digital products for creative problem solving.",
+    image: "/assets/images/event/event-img-1.webp",
+    location: "Miami, Florida, USA",
+    time: "10:00am - 12:00am",
+    day: "03",
+    month: "Nov",
+    delay: ".2",
+    href: "/event-details",
+  },
+  {
+    id: 2,
+    title: "Prepare for tomorrow’s careers on future learning sessions.",
+    image: "/assets/images/event/event-img-2.webp",
+    location: "Miami, Florida, USA",
+    time: "10:00am - 12:00am",
+    day: "07",
+    month: "Nov",
+    delay: ".4",
+    href: "/event-details",
+  },
+  {
+    id: 3,
+    title: "Unlock professional growth through practical skill sessions.",
+    image: "/assets/images/event/event-img-3.webp",
+    location: "Miami, Florida, USA",
+    time: "10:00am - 12:00am",
+    day: "09",
+    month: "Nov",
+    delay: ".2",
+    href: "/event-details",
+  },
+  {
+    id: 4,
+    title: "Build future-ready careers with industry-focused learning.",
+    image: "/assets/images/event/event-img-4.webp",
+    location: "Miami, Florida, USA",
+    time: "10:00am - 12:00am",
+    day: "14",
+    month: "Nov",
+    delay: ".4",
+    href: "/event-details",
+  },
+  {
+    id: 5,
+    title: "Turn creative ideas into real-world digital experiences.",
+    image: "/assets/images/event/event-img-5.webp",
+    location: "Miami, Florida, USA",
+    time: "10:00am - 12:00am",
+    day: "02",
+    month: "Dec",
+    delay: ".2",
+    href: "/event-details",
+  },
+  {
+    id: 6,
+    title: "Master in-demand skills through hands-on expert workshops.",
+    image: "/assets/images/event/event-img-6.webp",
+    location: "Miami, Florida, USA",
+    time: "10:00am - 12:00am",
+    day: "23",
+    month: "Dec",
+    delay: ".4",
+    href: "/event-details",
+  },
+];
+
+export const eventCategoriesData = [
+  { name: "Career", count: "03", href: "/event" },
+  { name: "Learning", count: "02", href: "/event" },
+  { name: "Skills", count: "03", href: "/event" },
+  { name: "Design", count: "06", href: "/event" },
+  { name: "Marketing", count: "04", href: "/event" },
+];
+
+export const eventRelatedData: EventGridItem[] = [
+  {
+    id: 1,
+    title: "Unlock professional growth through practical skill sessions.",
+    image: "/assets/images/event/event-img-3.webp",
+    location: "Miami, Florida, USA",
+    time: "10:00am - 12:00am",
+    day: "09",
+    month: "Nov",
+    href: "/event-details",
+  },
+  {
+    id: 2,
+    title: "Build future-ready careers with industry-focused learning.",
+    image: "/assets/images/event/event-img-4.webp",
+    location: "Miami, Florida, USA",
+    time: "10:00am - 12:00am",
+    day: "14",
+    month: "Nov",
+    href: "/event-details",
+  },
+  {
+    id: 3,
+    title: "Turn creative ideas into real-world digital experiences.",
+    image: "/assets/images/event/event-img-5.webp",
+    location: "Miami, Florida, USA",
+    time: "10:00am - 12:00am",
+    day: "02",
+    month: "Dec",
+    href: "/event-details",
+  },
+];
+
+export const eventTagsData = [
+  "Career",
+  "Business",
+  "Finance",
+  "Growth",
+  "Digital",
+  "Transform",
+  "Tech",
+  "Data",
+  "Innovation",
+  "Drive",
 ];
