@@ -29,10 +29,65 @@ export interface CategoryItem {
   href: string;
 }
 
+export interface CourseLessonItem {
+  title: string;
+  duration: string;
+  completed?: boolean;
+  locked?: boolean;
+  preview?: boolean;
+  videoUrl?: string;
+}
+
+export interface CourseModuleItem {
+  moduleNumber: string;
+  title: string;
+  meta: string;
+  lessons: CourseLessonItem[];
+}
+
+export interface CourseReviewItem {
+  id: number;
+  author: {
+    name: string;
+    avatar: string;
+    date: string;
+  };
+  rating: number;
+  content: string;
+}
+
+export interface CourseFaqItem {
+  id: number;
+  question: string;
+  answer: string;
+}
+
+export interface CourseRatingBreakdown {
+  "5": number;
+  "4": number;
+  "3": number;
+  "2": number;
+  "1": number;
+}
+
+export interface CourseAuthor {
+  name: string;
+  avatar: string;
+  role?: string;
+  instructorImage?: string;
+  rating?: number;
+  reviews?: string;
+  students?: string;
+  courses?: string;
+  bio?: string;
+  href?: string;
+}
+
 export interface CourseItem {
   id: number;
   title: string;
   image: string;
+  videoUrl?: string;
   category: string;
   filterCategories: string[];
   level: string;
@@ -42,21 +97,36 @@ export interface CourseItem {
     avatar: string;
     href: string;
   };
+  author?: CourseAuthor;
   meta: {
     lessons: string;
     duration: string;
     students: string;
+    modules?: string;
   };
   rating: {
     score: number;
     count: string;
+    totalRatings?: string;
+    breakdown?: CourseRatingBreakdown;
   };
   price: {
     original?: string;
     current: string;
+    discount?: string;
     isFree?: boolean;
   };
   href: string;
+  description?: string;
+  overview?: {
+    learningGoals: string[];
+    skills: string[];
+    requirements: string[];
+    intendedAudience: string[];
+  };
+  curriculum?: CourseModuleItem[];
+  reviewsList?: CourseReviewItem[];
+  faqs?: CourseFaqItem[];
 }
 
 export interface CounterItem {
