@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { aboutFaqsData } from "@/data/about";
 import AboutFaqSupportCard from "./subcomponents/AboutFaqSupportCard";
 import AboutFaqAccordionItem from "./subcomponents/AboutFaqAccordionItem";
