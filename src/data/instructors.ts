@@ -1,4 +1,4 @@
-import { InstructorItem } from "@/types";
+import { InstructorItem, InstructorListItem } from "@/types";
 
 export const instructorsData: InstructorItem[] = [
   {
@@ -35,6 +35,81 @@ export const instructorsData: InstructorItem[] = [
     studentsCount: "07K+",
     rating: 4.9,
     bgClass: "tj-theme-bg-6",
+    href: "/instructor-details",
+  },
+];
+
+export const instructorListData: InstructorListItem[] = [
+  {
+    id: 1,
+    name: "Devoin Lanee",
+    designation: "Chief design director",
+    image: "/assets/images/instructor/instructor-4.webp",
+    rating: 4.9,
+    sessions: "200 sessions",
+    price: "$20/h",
+    hourlyRate: 20,
+    expertise: "Design",
+    href: "/instructor-details",
+  },
+  {
+    id: 2,
+    name: "Dianne Russell",
+    designation: "Chief design director",
+    image: "/assets/images/instructor/instructor-5.webp",
+    rating: 4.9,
+    sessions: "210 sessions",
+    price: "$18/h",
+    hourlyRate: 18,
+    expertise: "Development",
+    href: "/instructor-details",
+  },
+  {
+    id: 3,
+    name: "Darrell Steward",
+    designation: "Chief design director",
+    image: "/assets/images/instructor/instructor-7.webp",
+    rating: 4.9,
+    sessions: "170 sessions",
+    price: "$15/h",
+    hourlyRate: 15,
+    expertise: "AI & Machine learning",
+    href: "/instructor-details",
+  },
+  {
+    id: 4,
+    name: "Marvin McKinney",
+    designation: "Chief design director",
+    image: "/assets/images/instructor/instructor-6.webp",
+    rating: 4.9,
+    sessions: "180 sessions",
+    price: "$25/h",
+    hourlyRate: 25,
+    expertise: "Marketing",
+    href: "/instructor-details",
+  },
+  {
+    id: 5,
+    name: "Edward Collins",
+    designation: "Chief design director",
+    image: "/assets/images/instructor/instructor-9.webp",
+    rating: 4.9,
+    sessions: "180 sessions",
+    price: "$25/h",
+    hourlyRate: 25,
+    expertise: "Business",
+    href: "/instructor-details",
+  },
+  {
+    id: 6,
+    name: "Carrol John",
+    designation: "Chief design director",
+    image: "/assets/images/instructor/instructor-10.webp",
+    rating: 4.9,
+    sessions: "170 sessions",
+    price: "$15/h",
+    hourlyRate: 15,
+    expertise: "Data science",
     href: "/instructor-details",
   },
 ];
