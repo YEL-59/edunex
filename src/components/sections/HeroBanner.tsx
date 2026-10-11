@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import Link from "next/link";
 import FlipButton from "../common/FlipButton";
 import CircularProgress from "../common/CircularProgress";

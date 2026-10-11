@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import RatingStars from "@/components/common/RatingStars";
 import { AboutTestimonialItem } from "@/types";

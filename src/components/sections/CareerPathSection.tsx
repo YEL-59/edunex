@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { careerPathsData } from "@/data/careerPaths";
 
 export default function CareerPathSection() {
