@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { clientsData } from "@/data/clients";
 import AboutClientLogoItem from "./subcomponents/AboutClientLogoItem";
 
