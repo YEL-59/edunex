@@ -1,0 +1,33 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "404comingsoon",
+    "blogs",
+    "course",
+    "dev",
+    "events",
+    "faqs",
+    "instractor",
+    "main"
+  ],
+  "parent": {
+    "404comingsoon": "main",
+    "blogs": "main",
+    "course": "main",
+    "dev": "main",
+    "events": "main",
+    "faqs": "main",
+    "instractor": "main",
+    "main": null
+  },
+  "order": [
+    "main",
+    "404comingsoon",
+    "blogs",
+    "course",
+    "dev",
+    "events",
+    "faqs",
+    "instractor"
+  ]
+}
