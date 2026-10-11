@@ -176,6 +176,19 @@ export interface AboutFaqItem {
   delay: string;
 }
 
+export interface FaqQuestionItem {
+  id: number;
+  question: string;
+  answer: string;
+  delay?: string;
+}
+
+export interface FaqTabCategory {
+  id: string;
+  label: string;
+  items: FaqQuestionItem[];
+}
+
 export interface InstructorListItem {
   id: number;
   name: string;
