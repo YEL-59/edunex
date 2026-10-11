@@ -1,0 +1,46 @@
+import React from "react";
+
+interface AboutTestimonialNavProps {
+  onPrev: () => void;
+  onNext: () => void;
+}
+
+export default function AboutTestimonialNav({
+  onPrev,
+  onNext,
+}: AboutTestimonialNavProps) {
+  return (
+    <div className="slider-navigation justify-content-center">
+      <div
+        className="slider-prev slider-prev-1"
+        onClick={onPrev}
+        role="button"
+        tabIndex={0}
+        aria-label="Previous Testimonial"
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") onPrev();
+        }}
+      >
+        <span className="anim-icon">
+          <i className="tji-arrow-left-3"></i>
+          <i className="tji-arrow-left-3"></i>
+        </span>
+      </div>
+      <div
+        className="slider-next slider-next-1"
+        onClick={onNext}
+        role="button"
+        tabIndex={0}
+        aria-label="Next Testimonial"
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") onNext();
+        }}
+      >
+        <span className="anim-icon">
+          <i className="tji-arrow-right-3"></i>
+          <i className="tji-arrow-right-3"></i>
+        </span>
+      </div>
+    </div>
+  );
+}
