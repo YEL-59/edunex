@@ -1,0 +1,40 @@
+import { InstructorItem } from "@/types";
+
+export const instructorsData: InstructorItem[] = [
+  {
+    id: 1,
+    name: "Devoin Lanee",
+    designation: "Chief design director",
+    image: "/assets/images/instructor/instructor-1.png",
+    badge: "Top rated",
+    coursesCount: "18+",
+    studentsCount: "10K+",
+    rating: 4.9,
+    bgClass: "tj-theme-bg-2",
+    href: "/instructor-details",
+  },
+  {
+    id: 2,
+    name: "Leslie Alexander",
+    designation: "Full stack developer",
+    image: "/assets/images/instructor/instructor-2.png",
+    badge: "Top rated",
+    coursesCount: "22+",
+    studentsCount: "21K+",
+    rating: 4.9,
+    bgClass: "tj-theme-bg-3",
+    href: "/instructor-details",
+  },
+  {
+    id: 3,
+    name: "Robert Fox",
+    designation: "Data analytics",
+    image: "/assets/images/instructor/instructor-3.png",
+    badge: "Top rated",
+    coursesCount: "09+",
+    studentsCount: "07K+",
+    rating: 4.9,
+    bgClass: "tj-theme-bg-6",
+    href: "/instructor-details",
+  },
+];
