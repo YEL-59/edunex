@@ -188,6 +188,17 @@ export interface CareerPathItem {
   isFirst?: boolean;
 }
 
+export interface BlogComment {
+  id: number;
+  author: {
+    name: string;
+    avatar: string;
+    date: string;
+  };
+  content: string;
+  replies?: BlogComment[];
+}
+
 export interface BlogItem {
   id: number;
   title: string;
@@ -196,6 +207,57 @@ export interface BlogItem {
   date: string;
   href: string;
   isLarge?: boolean;
+  description?: string;
+  filterTags?: string[];
+  commentsCount?: string;
+  author?: {
+    name: string;
+    avatar: string;
+    role?: string;
+  };
+}
+
+export interface BlogRecentPost {
+  id: number;
+  title: string;
+  thumbnail: string;
+  date: string;
+  href: string;
+}
+
+export interface BlogDetailsData {
+  id: number;
+  title: string;
+  thumbnail: string;
+  author: {
+    name: string;
+    avatar: string;
+    role: string;
+  };
+  date: string;
+  commentsCount: string;
+  paragraphs: string[];
+  checklist: string[];
+  quote: {
+    text: string;
+    author: string;
+    role: string;
+    avatar: string;
+  };
+  video: {
+    thumbnail: string;
+    videoUrl: string;
+  };
+  table: {
+    headers: string[];
+    rows: {
+      element: string;
+      question: string;
+      purpose: string;
+    }[];
+  };
+  tags: string[];
+  comments: BlogComment[];
 }
 
 export interface AboutCounterItem {
