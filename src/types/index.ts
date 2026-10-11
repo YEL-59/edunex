@@ -176,3 +176,56 @@ export interface AboutFaqItem {
   delay: string;
 }
 
+export interface InstructorListItem {
+  id: number;
+  name: string;
+  designation: string;
+  image: string;
+  rating: number;
+  sessions: string;
+  price: string;
+  hourlyRate: number;
+  expertise: string;
+  href: string;
+}
+
+export interface InstructorExperienceItem {
+  id: number;
+  title: string;
+  companyAndYear: string;
+  description: string;
+}
+
+export interface InstructorReviewItem {
+  id: number;
+  author: {
+    name: string;
+    avatar: string;
+    date: string;
+  };
+  rating: number;
+  content: string;
+}
+
+export interface InstructorDetailsData {
+  id: number;
+  name: string;
+  designation: string;
+  image: string;
+  category: string;
+  rating: {
+    score: number;
+    count: string;
+  };
+  lessonsCount: string;
+  studentsCount: string;
+  hourlyRate: string;
+  sessionsCount: string;
+  responseRate: string;
+  replyTime: string;
+  bio: string[];
+  skills: string[];
+  experiences: InstructorExperienceItem[];
+  reviews: InstructorReviewItem[];
+}
+
