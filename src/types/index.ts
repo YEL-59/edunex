@@ -229,3 +229,82 @@ export interface InstructorDetailsData {
   reviews: InstructorReviewItem[];
 }
 
+export interface EventGridItem {
+  id: number;
+  title: string;
+  image: string;
+  location: string;
+  time: string;
+  day: string;
+  month: string;
+  delay?: string;
+  href: string;
+}
+
+export interface EventAgendaItem {
+  id: number;
+  time: string;
+  title: string;
+  meta: string;
+  description: string;
+}
+
+export interface EventSpeakerItem {
+  id: number;
+  name: string;
+  role: string;
+  designation: string;
+  avatar: string;
+  linkedin: string;
+}
+
+export interface EventDetailsData {
+  id: number;
+  title: string;
+  category: string;
+  description: string;
+  date: string;
+  location: string;
+  time: string;
+  seatsLeft: string;
+  image: string;
+  host: {
+    name: string;
+    avatar: string;
+    designation: string;
+    href: string;
+  };
+  overview: {
+    paragraphs: string[];
+    skills: string[];
+  };
+  agenda: {
+    meta: string;
+    items: EventAgendaItem[];
+  };
+  speakers: EventSpeakerItem[];
+  venue: {
+    name: string;
+    address: string;
+    timeNotes: string;
+    parkingNotes: string;
+    mapUrl: string;
+    embedUrl: string;
+  };
+  faqs: {
+    id: number;
+    question: string;
+    answer: string;
+  }[];
+  sidebar: {
+    price: string;
+    originalPrice: string;
+    discountBadge: string;
+    pricingEndText: string;
+    countdownDate: string;
+    seatsBookedText: string;
+    seatsBookedPercent: string;
+    includes: string[];
+  };
+}
+
