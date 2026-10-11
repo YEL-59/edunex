@@ -211,14 +211,17 @@ export default function CoursesListSection({ initialCategory }: CoursesListSecti
                 </button>
               </div>
             ) : (
-              <div className="row tj-course-wrapper rg-30">
+              <div
+                className={`row tj-course-wrapper rg-30 ${
+                  viewMode === "list" ? "list-view-active" : ""
+                }`}
+              >
                 {coursesToDisplay.map((course) => (
                   <CourseCard
                     key={course.id}
                     course={course}
                     isWishlisted={wishlist.includes(course.id)}
                     onToggleWishlist={toggleWishlist}
-                    viewMode={viewMode}
                   />
                 ))}
               </div>
