@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
-import FlipButton from "@/components/common/FlipButton";
 import { aboutFaqsData } from "@/data/about";
+import AboutFaqSupportCard from "./subcomponents/AboutFaqSupportCard";
+import AboutFaqAccordionItem from "./subcomponents/AboutFaqAccordionItem";
 
 export default function AboutFaqSection() {
   const [activeId, setActiveId] = useState<number | null>(1);
@@ -27,65 +27,27 @@ export default function AboutFaqSection() {
         </div>
 
         <div className="row rg-20 flex-lg-row flex-column-reverse">
-          {/* Support Info Box Column */}
-          <div className="col-12 col-xl-4 col-lg-5">
-            <div className="support-box tj-fade-anim" data-duration=".6">
-              <div className="support-icon">
-                <Image
-                  src="/assets/images/icons/support.png"
-                  alt="Support Icon"
-                  width={60}
-                  height={60}
-                />
-              </div>
-              <div className="support-content">
-                <h3 className="support-title tj-fs-h4">Need support?</h3>
-                <p className="support-desc">
-                  Connect with experienced mentors and coaches who help you achieve.
-                </p>
-              </div>
-              <div className="support-btn">
-                <FlipButton href="/contact" icon="tji-arrow-right-2">
-                  Find a coach
-                </FlipButton>
-              </div>
-            </div>
-          </div>
+          {/* Sub-component: Support Info Box */}
+          <AboutFaqSupportCard
+            iconSrc="/assets/images/icons/support.png"
+            title="Need support?"
+            description="Connect with experienced mentors and coaches who help you achieve."
+            buttonText="Find a coach"
+            buttonHref="/contact"
+          />
 
-          {/* FAQ Accordion Column */}
+          {/* Sub-components: FAQ Accordion Column */}
           <div className="col-12 col-xl-8 col-lg-7">
             <div className="tj-faq-wrapper">
               <div className="tj-faq" id="tjAccordion01">
-                {aboutFaqsData.map((faq) => {
-                  const isOpen = activeId === faq.id;
-                  return (
-                    <div
-                      key={faq.id}
-                      className="tj-accordion-item tj-fade-anim"
-                      data-delay={faq.delay}
-                      data-duration="0.6"
-                    >
-                      <button
-                        className={`tj-accordion-title ${isOpen ? "" : "collapsed"}`}
-                        type="button"
-                        onClick={() => toggleAccordion(faq.id)}
-                        aria-expanded={isOpen}
-                      >
-                        {faq.question}
-                      </button>
-                      <div
-                        className={`collapse ${isOpen ? "show" : ""}`}
-                        style={{
-                          display: isOpen ? "block" : "none",
-                        }}
-                      >
-                        <div className="accordion-body tj-accordion-content">
-                          {faq.answer}
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
+                {aboutFaqsData.map((faq) => (
+                  <AboutFaqAccordionItem
+                    key={faq.id}
+                    faq={faq}
+                    isOpen={activeId === faq.id}
+                    onToggle={() => toggleAccordion(faq.id)}
+                  />
+                ))}
               </div>
             </div>
           </div>
