@@ -1,0 +1,68 @@
+import { CategoryItem } from "@/types";
+
+export const categoriesData: CategoryItem[] = [
+  {
+    id: 1,
+    title: "Graphic design",
+    coursesCount: "06 courses",
+    iconClass: "tji-categories-1",
+    bgClass: "tj-theme-bg-2",
+    href: "/courses",
+  },
+  {
+    id: 2,
+    title: "Web development",
+    coursesCount: "06 courses",
+    iconClass: "tji-categories-2",
+    bgClass: "tj-theme-bg-3",
+    href: "/courses",
+  },
+  {
+    id: 3,
+    title: "Digital marketing",
+    coursesCount: "04 courses",
+    iconClass: "tji-categories-3",
+    bgClass: "tj-theme-bg-4",
+    href: "/courses",
+  },
+  {
+    id: 4,
+    title: "AI and ML",
+    coursesCount: "10 courses",
+    iconClass: "tji-categories-4",
+    bgClass: "tj-theme-bg",
+    href: "/courses",
+  },
+  {
+    id: 5,
+    title: "Business strategy",
+    coursesCount: "06 courses",
+    iconClass: "tji-categories-5",
+    bgClass: "tj-theme-bg-5",
+    href: "/courses",
+  },
+  {
+    id: 6,
+    title: "Financial planning",
+    coursesCount: "06 courses",
+    iconClass: "tji-categories-6",
+    bgClass: "tj-theme-bg-6",
+    href: "/courses",
+  },
+  {
+    id: 7,
+    title: "Content writing",
+    coursesCount: "05 courses",
+    iconClass: "tji-categories-7",
+    bgClass: "tj-theme-bg-7",
+    href: "/courses",
+  },
+  {
+    id: 8,
+    title: "Data analytics",
+    coursesCount: "09 courses",
+    iconClass: "tji-categories-8",
+    bgClass: "tj-theme-bg-8",
+    href: "/courses",
+  },
+];

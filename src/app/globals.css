@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@import "../styles/bootstrap.min.css";
+@import "../styles/edunex-icons.css";
+@import "../styles/main.css";
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+
+/* ===================================================
+   Custom Theme Enhancements & Smooth Animations
+   =================================================== */
+
+/* Continuous Marquee Animation */
+@keyframes marqueeScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-33.333%, 0, 0);
+  }
+}
+
+.edunex-marquee-track {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  width: max-content !important;
+  animation: marqueeScroll 22s linear infinite !important;
+  will-change: transform;
+}
+
+.edunex-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Back to Top button custom styling transition */
+.back-to-top-wrapper {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+}
+
+.back-to-top-wrapper.back-to-top-btn-show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Ensure font families from next/font/google cascade correctly */
+body {
+  font-family: var(--tj-ff-body), "Manrope", sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+.banner-title, .sec-title, .title {
+  font-family: var(--tj-ff-heading), "Urbanist", sans-serif;
+}

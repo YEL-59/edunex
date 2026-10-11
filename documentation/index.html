@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edunex - Documentation | Next.js Education LMS Template</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Urbanist:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #723ec3;
+      --primary-hover: #5d2fa7;
+      --dark: #272f54;
+      --body: #434966;
+      --light-bg: #f8fafc;
+      --border: #e2e8f0;
+      --code-bg: #1e293b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Manrope', sans-serif;
+      color: var(--body);
+      background-color: var(--light-bg);
+      line-height: 1.7;
+      display: flex;
+    }
+    header.sidebar {
+      width: 280px;
+      height: 100vh;
+      background: #ffffff;
+      border-right: 1px solid var(--border);
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 30px 20px;
+      overflow-y: auto;
+    }
+    .logo {
+      font-family: 'Urbanist', sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+    .doc-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      background: rgba(114, 62, 195, 0.1);
+      color: var(--primary);
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-bottom: 25px;
+    }
+    .nav-links { list-style: none; }
+    .nav-links li { margin-bottom: 6px; }
+    .nav-links a {
+      color: var(--body);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      display: block;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .nav-links a:hover {
+      background: rgba(114, 62, 195, 0.08);
+      color: var(--primary);
+    }
+    main.content {
+      margin-left: 280px;
+      padding: 50px 80px;
+      max-width: 1080px;
+      width: 100%;
+    }
+    h1, h2, h3 {
+      font-family: 'Urbanist', sans-serif;
+      color: var(--dark);
+      margin-bottom: 16px;
+    }
+    h1 { font-size: 38px; font-weight: 800; }
+    h2 { font-size: 26px; font-weight: 700; margin-top: 45px; border-bottom: 2px solid var(--border); padding-bottom: 10px; }
+    h3 { font-size: 18px; font-weight: 700; margin-top: 24px; }
+    p { margin-bottom: 16px; }
+    ul, ol { margin-left: 20px; margin-bottom: 20px; }
+    li { margin-bottom: 8px; }
+    pre {
+      background: var(--code-bg);
+      color: #f1f5f9;
+      padding: 16px 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: monospace;
+      font-size: 13.5px;
+      margin-bottom: 20px;
+    }
+    code {
+      background: #e2e8f0;
+      color: var(--dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-family: monospace;
+    }
+    pre code { background: none; color: inherit; padding: 0; }
+    .alert-box {
+      background: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 20px;
+      font-size: 14.5px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 24px;
+      background: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    th, td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+    }
+    th { background: #f1f5f9; font-weight: 700; color: var(--dark); }
+    @media (max-width: 900px) {
+      body { flex-direction: column; }
+      header.sidebar { width: 100%; height: auto; position: relative; }
+      main.content { margin-left: 0; padding: 30px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="sidebar">
+    <div class="logo">Edunex</div>
+    <div class="doc-badge">v1.0.0 Documentation</div>
+    <ul class="nav-links">
+      <li><a href="#overview">1. Overview</a></li>
+      <li><a href="#requirements">2. System Requirements</a></li>
+      <li><a href="#getting-started">3. Getting Started</a></li>
+      <li><a href="#folder-structure">4. Folder Structure</a></li>
+      <li><a href="#customizing-data">5. Customizing Data</a></li>
+      <li><a href="#fonts-and-icons">6. Fonts &amp; Icons</a></li>
+      <li><a href="#styling">7. Styling &amp; Colors</a></li>
+      <li><a href="#production-build">8. Production &amp; Deployment</a></li>
+      <li><a href="#credits">9. Sources &amp; Credits</a></li>
+      <li><a href="#support">10. Customer Support</a></li>
+    </ul>
+  </header>
+
+  <main class="content">
+    <section id="overview">
+      <h1>Edunex - Next.js Education LMS Template</h1>
+      <p>Thank you for purchasing <strong>Edunex</strong>! Edunex is an ultra-premium, modern, and high-performance Education LMS and Online Course template built with <strong>Next.js (App Router)</strong>, <strong>TypeScript</strong>, and <strong>Tailwind CSS</strong>.</p>
+      <div class="alert-box">
+        <strong>ThemeForest Quality Standards:</strong> This template has been created following Envato's strict TypeScript and Next.js guidelines with zero lint errors and zero build warnings.
+      </div>
+    </section>
+
+    <section id="requirements">
+      <h2>2. System Requirements</h2>
+      <ul>
+        <li><strong>Node.js:</strong> v18.18.0 or newer (v20+ recommended)</li>
+        <li><strong>npm:</strong> v9.0.0 or newer (or pnpm / yarn)</li>
+        <li><strong>Code Editor:</strong> Visual Studio Code, Cursor, or WebStorm</li>
+      </ul>
+    </section>
+
+    <section id="getting-started">
+      <h2>3. Getting Started</h2>
+      <p>Follow these steps to get the development environment running locally:</p>
+      <h3>Step 1: Extract and Open</h3>
+      <p>Extract the downloaded ZIP package and open the <code>edunex</code> folder in your terminal or IDE.</p>
+      <h3>Step 2: Install Dependencies</h3>
+      <pre><code>npm install</code></pre>
+      <h3>Step 3: Run Development Server</h3>
+      <pre><code>npm run dev</code></pre>
+      <p>Now open <a href="http://localhost:3000" target="_blank">http://localhost:3000</a> in your web browser.</p>
+    </section>
+
+    <section id="folder-structure">
+      <h2>4. Folder Structure</h2>
+      <pre><code>edunex/
+├── public/
+│   ├── assets/
+│   │   ├── fonts/           # Custom icon font (edunex-icons)
+│   │   └── images/          # Organized image assets
+│   └── favicon.png
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx       # Root Layout (Google Fonts, SEO, Preloader)
+│   │   ├── page.tsx         # Assembled Home Page
+│   │   └── globals.css      # Tailwind & theme stylesheets
+│   ├── components/
+│   │   ├── common/          # Reusable UI elements (Buttons, Ratings, Progress)
+│   │   ├── layout/          # Header, StickyHeader, Drawer, Footer
+│   │   └── sections/        # Hero, Courses, Marquee, Testimonials, etc.
+│   ├── data/                # Easy-to-edit TypeScript datasets
+│   ├── hooks/               # Custom React hooks (useIsClient, etc.)
+│   ├── styles/              # Global CSS & icon fonts
+│   └── types/               # TypeScript interfaces
+├── package.json
+└── tsconfig.json</code></pre>
+    </section>
+
+    <section id="customizing-data">
+      <h2>5. Customizing Content &amp; Data</h2>
+      <p>All content is decoupled from components and stored in typed TypeScript files inside <code>src/data/</code>. You do not need to hunt through JSX to edit text or course details!</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Data File</th>
+            <th>Contents</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>src/data/navigation.ts</code></td>
+            <td>Main menu navigation, dropdown items, and links</td>
+          </tr>
+          <tr>
+            <td><code>src/data/courses.ts</code></td>
+            <td>Course titles, badges, instructor info, lessons, prices, filter tabs</td>
+          </tr>
+          <tr>
+            <td><code>src/data/categories.ts</code></td>
+            <td>8 category cards, colors, course count, and links</td>
+          </tr>
+          <tr>
+            <td><code>src/data/instructors.ts</code></td>
+            <td>Instructor profiles, ratings, course counts, students count</td>
+          </tr>
+          <tr>
+            <td><code>src/data/testimonials.ts</code></td>
+            <td>Student feedback quotes, reviewer names, designations, avatars</td>
+          </tr>
+          <tr>
+            <td><code>src/data/events.ts</code></td>
+            <td>Upcoming events, locations, timings, dates</td>
+          </tr>
+          <tr>
+            <td><code>src/data/counters.ts</code></td>
+            <td>Stat targets, numbers, and suffixes</td>
+          </tr>
+          <tr>
+            <td><code>src/data/blogs.ts</code></td>
+            <td>Blog articles, thumbnails, categories, dates</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="fonts-and-icons">
+      <h2>6. Fonts &amp; Icons</h2>
+      <p><strong>Fonts:</strong> We use Google Fonts (<code>Manrope</code> for body and <code>Urbanist</code> for headings) configured via <code>next/font/google</code> in <code>src/app/layout.tsx</code>. This eliminates layout shifts and improves Google PageSpeed scores.</p>
+      <p><strong>Icons:</strong> Authentic <code>edunex-icons</code> are included with font files in <code>public/assets/fonts/</code>. Simply use <code>&lt;i className="tji-*"&gt;&lt;/i&gt;</code>.</p>
+    </section>
+
+    <section id="styling">
+      <h2>7. Styling &amp; Colors</h2>
+      <p>Colors are controlled via CSS custom properties in <code>src/styles/main.css</code> and Tailwind configuration. Primary colors:</p>
+      <ul>
+        <li><code>--tj-color-theme-primary</code>: <code>#723ec3</code> (Signature Purple)</li>
+        <li><code>--tj-color-heading-primary</code>: <code>#272f54</code> (Dark Blue)</li>
+        <li><code>--tj-color-text-body</code>: <code>#434966</code> (Muted Text)</li>
+      </ul>
+    </section>
+
+    <section id="production-build">
+      <h2>8. Production &amp; Deployment</h2>
+      <p>To create an optimized production build:</p>
+      <pre><code>npm run build
+npm run start</code></pre>
+      <p>This project is 100% compatible with one-click deployment on <strong>Vercel</strong>, <strong>Netlify</strong>, or any Node.js hosting platform.</p>
+    </section>
+
+    <section id="credits">
+      <h2>9. Sources &amp; Credits</h2>
+      <ul>
+        <li><a href="https://nextjs.org" target="_blank">Next.js</a></li>
+        <li><a href="https://react.dev" target="_blank">React</a></li>
+        <li><a href="https://tailwindcss.com" target="_blank">Tailwind CSS</a></li>
+        <li><a href="https://swiperjs.com" target="_blank">Swiper Slider</a></li>
+        <li><a href="https://fonts.google.com" target="_blank">Google Fonts (Manrope &amp; Urbanist)</a></li>
+      </ul>
+    </section>
+
+    <section id="support">
+      <h2>10. Customer Support</h2>
+      <p>If you have any questions, encounter any issues, or need help with customization, please feel free to contact us through our ThemeForest author profile page. We are always happy to help!</p>
+    </section>
+  </main>
+</body>
+</html>
